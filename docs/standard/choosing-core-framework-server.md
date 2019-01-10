@@ -13,7 +13,7 @@ ms.locfileid: "50202232"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
-有两种支持的实现可用于通过 NET Framework 和 .NET Core 生成服务器端应用程序。 这两者共享许多相同的组件，可在它们之间共享代码。 但两者之间存在根本的差异，可根据需要实现的目标进行选择。  本文介绍了在何种情况下进行选择。
+有两种可用的实现来创建服务端应用程序，它们便是 .NET Core 和 .NET Framework。 这两者共享许多相同的组件，可在它们之间共享代码。 但两者之间存在根本的差异，可根据需要实现的目标进行选择。  本文介绍了在何种情况下进行选择。
 
 在以下情况，对服务器应用程序使用 .NET Core：
 
@@ -21,7 +21,7 @@ ms.locfileid: "50202232"
 * 用户正在面向微服务。
 * 用户正在使用 Docker 容器。
 * 需要高性能和可扩展的系统。
-* 需按应用程序提供并行的 .NET 版本。
+* 需要每个应用程序使用不同的 .NET 版本。
 
 在以下情况，对服务器应用程序使用 .NET Framework ：
 
@@ -76,7 +76,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 库很快将使用 .NET Standard。 通过 .NET Standard 可跨各种 .NET 实现（包括 .NET Core）共享代码。 使用 .NET Standard 2.0 则更简单：
 
-- API 曲面已变为更大。 
+- API 覆盖面已经更广。 
 - 引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard/.NET Core 项目引用.NET Framework 库。 若要详细了解兼容性模式，请参阅 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)（宣布发布 .NET Standard 2.0）。
 
 因此，只有在库或 NuGet 包使用的技术在 .NET Standard/.NET Core 中不可用的情况下，才需要使用 .NET Framework。
